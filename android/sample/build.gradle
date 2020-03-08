@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 dependencies {
-    compile project(':hera')
+    api project(':hera')
 }
 
 android {
     compileSdkVersion project.compileSdkVersion
-    buildToolsVersion project.buildToolsVersion
+    //buildToolsVersion project.buildToolsVersion
 
     defaultConfig {
         minSdkVersion project.minSdkVersion
