@@ -15,7 +15,7 @@ public class SampleActivity extends AppCompatActivity {
         setContentView(R.layout.sample_activity);
 
         final String userId = "123";//标识宿主App业务用户id
-        final String appId = "demoapp";//小程序的id
+        final String appId = "app";//小程序的id
         final String appPath = "";//小程序的本地存储路径
         //sdk内部会首先读取并解压appPath下的小程序包，若appPath为空，则读取并解压assets下以appId命名的zip文件
         //小程序解压后将存储在以appId命名的文件夹下
