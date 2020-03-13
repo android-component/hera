@@ -33,6 +33,14 @@ public class SampleActivity extends AppCompatActivity {
                 launchWeb();
             }
         });
+
+        findViewById(R.id.tv_wechat).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String appId = "demoapp";
+                launchHome(appId);
+            }
+        });
     }
 
     /**

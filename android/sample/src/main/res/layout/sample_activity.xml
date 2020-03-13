@@ -43,6 +43,17 @@
             android:text="普通h5"
             android:textColor="@color/color_button"
             android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/tv_wechat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="官方demo"
+            android:textColor="@color/color_button"
+            android:textSize="17dp" />
     </LinearLayout>
 
 </LinearLayout>
