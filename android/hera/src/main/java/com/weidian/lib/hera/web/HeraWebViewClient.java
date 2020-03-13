@@ -31,6 +31,7 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.text.TextUtils;
+
 import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 import com.tencent.smtt.sdk.WebView;
@@ -103,5 +104,17 @@ public class HeraWebViewClient extends WebViewClient {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public void onPageFinished(final WebView webView, String url) {
+        super.onPageFinished(webView, url);
+        webView.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                webView.loadUrl("javascript:document.querySelectorAll('body').forEach(el => el.style.overflow-y= 'scroll'");
+                webView.loadUrl("javascript:document.getElementsByTagName('body')[0].style.overflow-y='scroll';");
+            }
+        }, 500);
     }
 }
