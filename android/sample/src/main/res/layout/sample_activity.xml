@@ -23,7 +23,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/enter_hera"
+            android:id="@+id/tv_mgtv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -54,6 +54,18 @@
             android:text="官方demo"
             android:textColor="@color/color_button"
             android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/tv_mala"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/enter_hera"
+            android:textColor="@color/color_button"
+            android:textSize="17dp"
+            android:visibility="gone"/>
     </LinearLayout>
 
 </LinearLayout>

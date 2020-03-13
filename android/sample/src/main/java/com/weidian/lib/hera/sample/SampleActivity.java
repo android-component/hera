@@ -18,12 +18,14 @@ public class SampleActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sample_activity);
+        initView();
+    }
 
-        findViewById(R.id.enter_hera).setOnClickListener(new View.OnClickListener() {
+    private void initView() {
+        findViewById(R.id.tv_mgtv).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String appId = "mgtv-app";//小程序的id
-                launchHome(appId);
+                launchHome("mgtv-app");
             }
         });
 
@@ -37,8 +39,14 @@ public class SampleActivity extends AppCompatActivity {
         findViewById(R.id.tv_wechat).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String appId = "demoapp";
-                launchHome(appId);
+                launchHome("demoapp");
+            }
+        });
+
+        findViewById(R.id.tv_mala).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchHome("mala-app");
             }
         });
     }
