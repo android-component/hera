@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.weidian.lib.hera.main.HeraService;
+import com.weidian.lib.hera.sample.web.WebActivity;
 import com.weidian.lib.hera.utils.StorageUtil;
 
 import java.io.File;
@@ -25,10 +26,17 @@ public class SampleActivity extends AppCompatActivity {
                 launchHome(appId);
             }
         });
+
+        findViewById(R.id.tv_h5).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchWeb();
+            }
+        });
     }
 
     /**
-     * 启动首页
+     * 启动小程序首页
      * @param appId
      */
     private void launchHome(String appId) {
@@ -38,6 +46,13 @@ public class SampleActivity extends AppCompatActivity {
         final String userId = "123";//标识宿主App业务用户id
         final String appPath = getMiniAppPath(this, appId);
         HeraService.launchHome(getApplicationContext(), userId, appId, appPath);
+    }
+
+    /**
+     * 加载web
+     */
+    private void launchWeb() {
+        WebActivity.start(this, WebActivity.URL_MGTV);
     }
 
     /**

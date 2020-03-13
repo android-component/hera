@@ -27,6 +27,10 @@
         </activity>
 
         <activity android:name=".ForResultActivity" />
+
+        <activity
+            android:name=".web.WebActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
