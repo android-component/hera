@@ -27,6 +27,9 @@ dependencies {
 
 即可让你的工程拥有运行小程序的能力。
 
+## 微信小程序转换
+hera run android
+
 ## SDK初始化
 
 在使用Hera框架运行你的小程序之前，你应该选择合适的时机在主进程中对框架进行配置并完成初始化工作，例如示例工程在 `HeraApplication.java` 中进行了初始化操作：
